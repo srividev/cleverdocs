@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+clever/            # your virtual env folder name (if present)
+*.egg-info/
+dist/
+build/
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Data, uploads, results, and models (avoid committing large binaries)
+/uploads/
+results/
+dataset/
+models/*.pkl
+models/*.joblib
+*.zip
+
+# Secrets / configs
+.env
+.env.* 
+secrets.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python virtual env (common names)
+venv/
+env/

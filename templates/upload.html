@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CleverDocs — AI Document Classifier</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <main class="app">
+
+    <!-- Header -->
+    <header class="topbar">
+      <div class="brand">CleverDocs</div>
+      <div class="subtitle">AI Document Classifier — Dark Mode</div>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="panel upload-panel">
+      <h2>Upload a Document</h2>
+
+      <!-- Upload form container (NO auto-submit) -->
+      <div id="uploadForm" class="upload-form">
+
+        <!-- Drag-and-drop zone -->
+        <div class="filedrop" id="dropzone">
+          <div class="drop-text">
+            Drop file here or <span id="browseBtn" class="linkish">browse</span>
+          </div>
+          <div class="hint">Supported formats: PDF, PNG, JPG</div>
+        </div>
+
+        <!-- Hidden input (NOT inside the label) -->
+        <input id="fileInput" type="file" accept=".pdf,.png,.jpg,.jpeg" style="display:none;">
+
+        <!-- Filename -->
+        <div id="fileName" class="filename"></div>
+
+        <!-- Buttons -->
+        <div class="controls">
+          <button id="uploadBtn" type="button" class="btn primary">Upload & Classify</button>
+          <button id="clearBtn" type="button" class="btn ghost">Clear</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="panel result-panel hidden" id="resultPanel">
+
+      <div class="result-header">
+        <div>
+          <div class="result-title" id="docType">Document Type</div>
+          <div class="result-sub" id="resultMessage">Status message</div>
+        </div>
+
+        <div class="confidence-block">
+          <div class="meter">
+            <div id="meterFill" class="meter-fill"></div>
+          </div>
+          <div id="confidenceText" class="conf-text">—</div>
+        </div>
+      </div>
+
+      <div class="result-body">
+        <div class="preview">
+          <div class="preview-title">Extracted Text Preview</div>
+          <pre id="previewText" class="preview-text"></pre>
+        </div>
+
+        <div class="actions">
+          <button id="downloadJson" class="btn secondary">Download JSON</button>
+          <button id="uploadAnother" class="btn ghost">Upload Another</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <small>Powered by CleverDocs • AI Document Classification</small>
+    </footer>
+
+  </main>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

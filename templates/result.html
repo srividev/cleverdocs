@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CleverDocs — Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">CleverDocs</div>
+      <div class="subtitle">Result</div>
+    </header>
+
+    <section class="panel result-panel" id="staticResult">
+      <div class="result-header">
+        <div>
+          <div class="result-title" id="docType">invoice</div>
+          <div class="result-sub" id="resultMessage">Classification successful</div>
+        </div>
+        <div class="confidence-block">
+          <div class="meter"><div id="meterFill" class="meter-fill" style="width:100%"></div></div>
+          <div id="confidenceText" class="conf-text">100%</div>
+        </div>
+      </div>
+
+      <div class="result-body">
+        <div class="preview">
+          <div class="preview-title">Text Preview</div>
+          <pre id="previewText" class="preview-text">Sample preview text</pre>
+        </div>
+
+        <div class="actions">
+          <a href="/" class="btn ghost">Upload another</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+flask
+pytesseract
+PyMuPDF
+scikit-learn
+numpy
+pandas
+nltk
+joblib
+Pillow
